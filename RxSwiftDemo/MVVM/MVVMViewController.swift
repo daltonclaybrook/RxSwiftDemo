@@ -14,11 +14,7 @@ class MVVMViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var searchBar: UISearchBar!
-    private let loadingView: UIActivityIndicatorView = {
-        let loadingView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-        loadingView.hidesWhenStopped = true
-        return loadingView
-    }()
+    private let loadingView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     
     private let disposeBag = DisposeBag()
     

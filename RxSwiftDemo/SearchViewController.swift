@@ -15,11 +15,7 @@ class SearchViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     @IBOutlet var searchBar: UISearchBar!
-    private let loadingView: UIActivityIndicatorView = {
-        let loadingView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-        loadingView.hidesWhenStopped = true
-        return loadingView
-    }()
+    private let loadingView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     
     private let isLoading = Variable(false)
     private let disposeBag = DisposeBag()
