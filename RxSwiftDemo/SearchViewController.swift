@@ -62,7 +62,6 @@ class SearchViewController: UIViewController {
         
         return GitHub()
             .fetchRepos(with: query)
-            .asObservable()
             .map { $0.data }
             .flatMapUnwrap()
             .mapModel(model: ReposResponse.self)
