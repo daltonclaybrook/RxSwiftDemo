@@ -17,6 +17,8 @@
 		754B471F1FB94572008678B9 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B471E1FB94572008678B9 /* Github.swift */; };
 		754B47211FB94E76008678B9 /* Model+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B47201FB94E76008678B9 /* Model+Rx.swift */; };
 		754B47231FB95995008678B9 /* Optional+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B47221FB95995008678B9 /* Optional+Rx.swift */; };
+		754B47251FBA8AC9008678B9 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B47241FBA8AC9008678B9 /* SearchViewModel.swift */; };
+		754B47271FBA8D47008678B9 /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B47261FBA8D47008678B9 /* MVVMViewController.swift */; };
 		DDFF3300DFFC878E23423A40 /* Pods_RxSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3C206468AF99129BA2163E /* Pods_RxSwiftDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		754B471E1FB94572008678B9 /* Github.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
 		754B47201FB94E76008678B9 /* Model+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Rx.swift"; sourceTree = "<group>"; };
 		754B47221FB95995008678B9 /* Optional+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Rx.swift"; sourceTree = "<group>"; };
+		754B47241FBA8AC9008678B9 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		754B47261FBA8D47008678B9 /* MVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
 		FAFF1FDC5B8F0BD1748E86CA /* Pods-RxSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDemo/Pods-RxSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,19 +75,37 @@
 		754B47071FB93F6D008678B9 /* RxSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				754B47281FBA8F39008678B9 /* MVVM */,
+				754B471A1FB94112008678B9 /* RepoCell.swift */,
 				754B47081FB93F6D008678B9 /* AppDelegate.swift */,
 				754B47201FB94E76008678B9 /* Model+Rx.swift */,
 				754B47221FB95995008678B9 /* Optional+Rx.swift */,
 				754B471E1FB94572008678B9 /* Github.swift */,
 				754B471C1FB94194008678B9 /* Repo.swift */,
-				754B471A1FB94112008678B9 /* RepoCell.swift */,
 				754B470A1FB93F6D008678B9 /* SearchViewController.swift */,
-				754B470C1FB93F6D008678B9 /* Main.storyboard */,
-				754B470F1FB93F6D008678B9 /* Assets.xcassets */,
-				754B47111FB93F6D008678B9 /* LaunchScreen.storyboard */,
-				754B47141FB93F6D008678B9 /* Info.plist */,
+				754B472C1FBA905E008678B9 /* Supporting */,
 			);
 			path = RxSwiftDemo;
+			sourceTree = "<group>";
+		};
+		754B47281FBA8F39008678B9 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				754B47241FBA8AC9008678B9 /* SearchViewModel.swift */,
+				754B47261FBA8D47008678B9 /* MVVMViewController.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		754B472C1FBA905E008678B9 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				754B470C1FB93F6D008678B9 /* Main.storyboard */,
+				754B47111FB93F6D008678B9 /* LaunchScreen.storyboard */,
+				754B470F1FB93F6D008678B9 /* Assets.xcassets */,
+				754B47141FB93F6D008678B9 /* Info.plist */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 		9F0277657C8B21F5EFDC7899 /* Frameworks */ = {
@@ -238,8 +260,10 @@
 			files = (
 				754B470B1FB93F6D008678B9 /* SearchViewController.swift in Sources */,
 				754B47211FB94E76008678B9 /* Model+Rx.swift in Sources */,
+				754B47251FBA8AC9008678B9 /* SearchViewModel.swift in Sources */,
 				754B47091FB93F6D008678B9 /* AppDelegate.swift in Sources */,
 				754B471B1FB94112008678B9 /* RepoCell.swift in Sources */,
+				754B47271FBA8D47008678B9 /* MVVMViewController.swift in Sources */,
 				754B47231FB95995008678B9 /* Optional+Rx.swift in Sources */,
 				754B471D1FB94194008678B9 /* Repo.swift in Sources */,
 				754B471F1FB94572008678B9 /* Github.swift in Sources */,
@@ -382,7 +406,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ELT5AES94A;
-				INFOPLIST_FILE = RxSwiftDemo/Info.plist;
+				INFOPLIST_FILE = RxSwiftDemo/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.daltonclaybrook.RxSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -398,7 +422,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ELT5AES94A;
-				INFOPLIST_FILE = RxSwiftDemo/Info.plist;
+				INFOPLIST_FILE = RxSwiftDemo/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.daltonclaybrook.RxSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
